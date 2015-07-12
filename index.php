@@ -109,10 +109,10 @@ if(!isset($_SESSION['s_user']))
                             <div class="small-box bg-red">
                                 <div class="inner">
                                     <h3>
-                                        65
+                                         <?php $res=newReg();  echo $res; ?>
                                     </h3>
                                     <p>
-                                        New Registrations
+                                        New Registrations Today
                                     </p>
                                 </div>
                                 <div class="icon">

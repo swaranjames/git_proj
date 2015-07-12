@@ -14,7 +14,7 @@ if(!isset($_SESSION['s_user']))
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>User Information</title>
+        <title>Student Registartion</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
         
         <!-- bootstrap 3.0.2 -->
@@ -106,7 +106,7 @@ if(!isset($_SESSION['s_user']))
                                                 <th>Degree</th>
                                                 <th>Phone</th>
                                                 <th>Actions</th>
-                                                <th>Semester</th>
+                                               
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -128,9 +128,7 @@ if(!isset($_SESSION['s_user']))
                                                       <button type='button' class='btn btn-info' data-id='".$row['id']."'>Delete</button>   
                                                      </div>
                                                 </td>
-                                                <td>
-                                                <button type='button' class='btn btn-warning' data-toggle='modal' data-target='#editStudModal' data-id='".$row['id']."'>Update Sem</button>
-                                                </td>
+                                               
                                             </tr>";}  ?>
                                         </tbody>
                                         <tfoot>
@@ -142,7 +140,7 @@ if(!isset($_SESSION['s_user']))
                                                 <th>Degree</th>
                                                 <th>Phone</th>
                                                 <th>Actions</th>
-                                                <th>Semester</th>
+                                               
                                             </tr>
                                         </tfoot>
                                     </table>

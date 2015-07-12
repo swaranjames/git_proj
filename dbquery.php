@@ -25,6 +25,7 @@ function getAlldegree() {
 	return $result;
 }
 
+
 function getAlldept() {
 	$res = mysql_query ( "select distinct(dept) from student order by dept" );
 	$result = array ();
@@ -200,20 +201,28 @@ function tableUpdate($user,$password,$fullname,$email,$desig)
         $sql1="select * from usermaster where username='{$user}'";
         $res1=mysql_query($sql1);
         $row1=mysql_fetch_array($res1);
+         $email = $row1['email'];
+                                    $default = "http://geeknews.net/images/no_gravatar.jpg";
+                                    $size = 80;
+                                    $grav_url = "http://www.gravatar.com/avatar/" . md5( strtolower( trim( $email ) ) ) . "?d=" . urlencode( $default ) . "&s=" . $size;
         $html= "<tr>
                                               
                                              <td>".$row1['id']."</td>
                                              <td>".$row1['username']."</td>
                                              <td>".$row1['fullname']."</td>
-                                             <td>".$row1['email']."</td>
+                                             <td>
+                                               
+                                    
+                                            <img src=$grav_url class='img-circle' alt='User Image' /></td>
+                                            <td>".$row1['email']."</td>
                                             <td>".$row1['created_on']."</td>
                                             <td>".$row1['last_login']."</td>
                                             <td>".$row1['designation']."</td>
                                              <td>
                                              <div class='btn-group'>
-                                                      <button type='button' class='btn btn-success'>View</button>
-                                                      <button type='button' class='btn btn-default'>Edit</button>
-                                                      <button type='button' class='btn btn-info'>Delete</button>
+                                                      <button type='button' class='btn btn-success' data-toggle='modal' data-target='#viewModal' data-id=".$row1['id']."><i class='glyphicon glyphicon-eye-open'></i></button>
+                                                      <button type='button' class='btn btn-default' data-toggle='modal' data-target='#editModal' data-id=".$row1['id']."><i class='glyphicon glyphicon-edit'></i></button>
+                                                      <button type='button' class='btn btn-info' data-id=".$row1['id']."><i class='glyphicon glyphicon-trash'></i></button>
                                                      </div>
                                              </td>
                                             
@@ -241,6 +250,14 @@ function selectStudentTable()
 function no_of_rows($table)
 {
     $sql="select count(*) from ".$table;
+    $res=mysql_query($sql);
+    $row=mysql_fetch_array($res,MYSQL_ASSOC);
+    $ret=$row['count(*)'];
+    return $ret;
+}
+function newReg()
+{
+    $sql="SELECT count(*) from student where date(added_on)=date(sysdate())";
     $res=mysql_query($sql);
     $row=mysql_fetch_array($res,MYSQL_ASSOC);
     $ret=$row['count(*)'];

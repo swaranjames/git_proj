@@ -41,6 +41,7 @@
                         data:datast,
                         success:function(result){
                             $('#usertable').append(result);
+                           
                         },
                         error:function(){
                             alert("error");
