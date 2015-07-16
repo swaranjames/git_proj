@@ -7,6 +7,7 @@
                 $('button.btn.btn-default').click(function(){
                     var id=$(this).data('id');
                     var datast='id='+id;
+                    
                     $.ajax({
                         type:'POST',
                         url:'viewStudentcall.php',

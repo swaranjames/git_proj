@@ -52,7 +52,7 @@ if(!isset($_SESSION['s_user']))
                         <li class="active">Student</li><li>Search</li>
                     </ol>
                 </section>
-<?php  include("studentViewModal.php"); include("editstudentmodal.php"); ?>
+<?php include("editstudentmodal.php");?>
                 <!-- Main content -->
                 <section class="content">
                         <!-- Main row -->         <center>
@@ -225,7 +225,7 @@ if(!isset($_SESSION['s_user']))
 						}else{
                      jQuery.each(data, function(i, r){	                      
 	                        var clicktourl=r.id;
-	                        var linkgoto='<a href="#'+clicktourl+'"><button title="view" class="btn btn-success"><i class="glyphicon glyphicon-search"></i></button></a>';
+	                        var linkgoto='<button title="view" class="btn btn-default" data-toggle="modal" data-target="#editStudModal" data-id="'+clicktourl+'"><i class="glyphicon glyphicon-search"></i></button>';
 	         
 
 	                        sTable.fnAddData( [r.id, r.name, r.email, r.dept, r.degree, r.phone,linkgoto ]);

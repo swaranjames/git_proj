@@ -62,13 +62,14 @@
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h3 class="modal-title">USER REGISTRATION</h3>
         </div>
-        <div class="modal-body">
+        <div class="modal-body form-group">
+            
          
           <center>  <table>
               <tr><td id="validUser"></td></tr>
                 <tr>
                     <td>
-                        <div class="input-group" style="width:428px;">
+                        <div class="input-group  ">
                                         <span class="input-group-addon" style="width:40px;"><i class="fa fa-user"></i></span>
                                         <input type="text" class="form-control" placeholder="Username" pattern="/^(?=.*[a-zA-Z]{1,})(?=.*[\d]{0,})[a-zA-Z0-9]{5,10}$/" name="user" id="user">
                         </div>
@@ -76,7 +77,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <div class="input-group" style="width:428px;">
+                        <div class="input-group  "  >
                                         <span class="input-group-addon" style="width:40px;"><i class="fa fa-lock"></i></span>
                                         <input type="text" class="form-control" placeholder="Password" name="pass" id="pass">
                         </div>
@@ -84,7 +85,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <div class="input-group" style="width:428px;">
+                        <div class="input-group  "  >
                                         <span class="input-group-addon" style="width:40px;"><i class="fa fa-envelope"></i></span>
                                         <input type="text" class="form-control" placeholder="Email" name="email" id="email">
                         </div>
@@ -92,7 +93,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <div class="input-group" style="width:428px;">
+                        <div class="input-group  "  >
                                         <span class="input-group-addon" style="width:40px;"><i class="fa fa-male"></i></span>
                                         <input type="text" class="form-control" placeholder="Fullname" name="fullname" id="fullname">
                         </div>
@@ -116,6 +117,7 @@
                 </tr>
                 
             </table> </center>
+            
         </div>
         <div class="modal-footer" style="background:#3c8dbc;">
           <button type="button" class="btn btn-default" data-dismiss="modal" id="subButton">Submit</button>
