@@ -48,6 +48,7 @@ if(isset($_COOKIE['c_user']) && isset($_COOKIE['c_pass']))   //checking for the 
     $userc=$_COOKIE['c_user'];   //setting the text fields
     $passc=$_COOKIE['c_pass'];
     $rem='checked';
+  
 }
 else
 {
@@ -82,10 +83,10 @@ else
             <form action="login.php" method="POST">
                 <div class="body bg-gray">
                     <div class="form-group">
-                        <input type="text" name="userid" class="form-control" placeholder="User ID" required/>
+                        <input type="text" name="userid" class="form-control" placeholder="User ID" value="<?php echo $userc; ?>" required/>
                     </div>
                     <div class="form-group">
-                        <input type="password" name="password" class="form-control" placeholder="Password" required/>
+                        <input type="password" name="password" class="form-control" placeholder="Password" value="<?php echo $passc; ?>" required/>
                     </div>          
                     <div class="form-group">
                         <input type="checkbox" name="remember_me" value="1" <?php echo $rem; ?>/> Remember me
