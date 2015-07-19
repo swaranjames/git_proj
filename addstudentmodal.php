@@ -22,7 +22,7 @@
           <center>
                                         <div class="box box-warning">
                                 <div class="box-header">
-                                    <h3 class="box-title">Filling of Green marked feilds are mandatory</h3>
+                                    <h3 class="box-title">Fill up student details</h3>
                                 </div><!-- /.box-header -->
                                 <div class="box-body">
                                     <form role="form" action="studentregister.php" method="POST">
